@@ -11,3 +11,10 @@ fig = px.histogram(df, x='odometer', title='Distribution of Vehicle Odometer')
 
 # Display the histogram in Streamlit
 st.plotly_chart(fig)
+st.title('Odometer vs Price by Model')
+
+# Create a histogram using Plotly Express
+fig1 = px.scatter(df, x='odometer', y='price', color='model')
+
+# Display the histogram in Streamlit
+st.plotly_chart(fig1)
